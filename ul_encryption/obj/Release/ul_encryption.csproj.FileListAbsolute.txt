@@ -2,3 +2,8 @@ F:\project\injector\pin\ul_encryption\ul_encryption\bin\Release\ul_encryption.dl
 F:\project\injector\pin\ul_encryption\ul_encryption\bin\Release\ul_encryption.pdb
 F:\project\injector\pin\ul_encryption\ul_encryption\obj\Release\ul_encryption.dll
 F:\project\injector\pin\ul_encryption\ul_encryption\obj\Release\ul_encryption.pdb
+F:\project\injector\sha256-rvExtension\ul_encryption\bin\Release\ul_encryption.dll
+F:\project\injector\sha256-rvExtension\ul_encryption\bin\Release\ul_encryption.pdb
+F:\project\injector\sha256-rvExtension\ul_encryption\obj\Release\ul_encryption.csprojResolveAssemblyReference.cache
+F:\project\injector\sha256-rvExtension\ul_encryption\obj\Release\ul_encryption.dll
+F:\project\injector\sha256-rvExtension\ul_encryption\obj\Release\ul_encryption.pdb

@@ -16,14 +16,37 @@ namespace ul_encryption
         [DllExport("RVExtension", CallingConvention = CallingConvention.Winapi)]
         public static void RVExtension(StringBuilder output, int outputSize, [MarshalAs(UnmanagedType.LPStr)] string function)
         {
+            string Error_Invalid_Command = "UL Encryption >> ERROR >> Invalid Command";
+            string Error_Invalid_ArrayStrLength = "UL Encryption >> ERROR >> Invalid Str Array Length";
+
+            string[] stringParts = function.Split(':');
+
+            if (stringParts.Length < 2)
+            {
+                output.Append(Error_Invalid_ArrayStrLength);
+            }
+            else
+            {
+                switch (stringParts[0].ToLower())
+                {
+                    case "sha256":
+                        output.Append(Sha256(stringParts[1]));
+                        break;
+                    default:
+                        output.Append(Error_Invalid_Command);
+                        break;
+                };
+            };
             outputSize--;
 
+            //output.Append(stringParts[0]);
             // Reverses the input string
             //char[] arr = function.ToCharArray();
            // Array.Reverse(arr);
            // string result = new string(arr);
-            output.Append(Sha256(function));
+            //output.Append(Sha256(function));
         }
+
         static string Sha256(string randomString)
         {
             var crypt = new System.Security.Cryptography.SHA256Managed();

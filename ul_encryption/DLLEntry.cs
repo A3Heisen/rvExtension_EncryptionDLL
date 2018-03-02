@@ -22,9 +22,9 @@ namespace ul_encryption
             //char[] arr = function.ToCharArray();
            // Array.Reverse(arr);
            // string result = new string(arr);
-            output.Append(sha256(function));
+            output.Append(Sha256(function));
         }
-        static string sha256(string randomString)
+        static string Sha256(string randomString)
         {
             var crypt = new System.Security.Cryptography.SHA256Managed();
             var hash = new System.Text.StringBuilder();

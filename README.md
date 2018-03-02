@@ -10,7 +10,7 @@ encryption algorithms/methods.
 
 *Params*
 ```
-method
+method (forces toLower so not case sensitive)
 password
 ```
 

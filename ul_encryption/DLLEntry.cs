@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,19 +33,15 @@ namespace ul_encryption
                     case "sha256":
                         output.Append(Sha256(stringParts[1]));
                         break;
+                    case "md5":
+                        output.Append(Md5(stringParts[1]));
+                        break;
                     default:
                         output.Append(Error_Invalid_Command);
                         break;
                 };
             };
             outputSize--;
-
-            //output.Append(stringParts[0]);
-            // Reverses the input string
-            //char[] arr = function.ToCharArray();
-           // Array.Reverse(arr);
-           // string result = new string(arr);
-            //output.Append(Sha256(function));
         }
 
         static string Sha256(string randomString)
@@ -58,5 +55,21 @@ namespace ul_encryption
             }
             return hash.ToString();
         }
+
+        static string Md5(string strToMD5)
+        {
+            MD5 MD5 = MD5.Create();
+            byte[] strByteArray = MD5.ComputeHash(Encoding.UTF8.GetBytes(strToMD5));
+
+            StringBuilder ByteStrBuilder = new StringBuilder();
+
+            for (int i = 0; i < strByteArray.Length; i++)
+            {
+                ByteStrBuilder.Append(strByteArray[i].ToString("x2"));
+            }
+
+            return ByteStrBuilder.ToString();
+        }
+
     }
 }

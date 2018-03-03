@@ -1,5 +1,7 @@
 # rvExtension_EncryptionDLL
 
+#### *DO NOT RUN WITH BATTLEYE ENABLED ON LOCAL CLIENTS!*
+
 A extension for Real Virtual Reality Engine 4 for Armed Assault 3 (Arma 3 ) to allow users to encrypt their desired string with optional
 encryption algorithms/methods.
 

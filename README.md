@@ -7,6 +7,7 @@ encryption algorithms/methods.
 
 #### Supported Algorithms/Methods
 - Sha256
+- MD5
 
 #### Usage
 

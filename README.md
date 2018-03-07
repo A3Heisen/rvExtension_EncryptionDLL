@@ -9,6 +9,13 @@ encryption algorithms/methods.
 - Sha256
 - MD5
 
+#### Planned Algorithms/Methods
+- RSA
+- AES 128
+- AES 192
+- AES 256
+- Sha512
+
 #### Usage
 
 *Params*
